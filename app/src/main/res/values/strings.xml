@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Style Omega Fashion</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="loginbtn">LOGIN</string>
+    <string name="fullname">Fullname</string>
+    <string name="confirmpassword">To Confirm  type password again</string>
+    <string name="email">Email</string>
+    <string name="registerbtn">REGISTER</string>
+    <string name="appbar_scrolling_view_behavior" />
+    <string name="emptyString" />
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

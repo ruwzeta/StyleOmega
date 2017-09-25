@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.cb006789styleomega.Catergorys">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.53"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/immen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/men" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.53"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imkids"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/kids"
+
+                tools:ignore="ContentDescription,InefficientWeight,NestedWeights,ObsoleteLayoutParam" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.53"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imacces"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/acess"
+
+                tools:ignore="ContentDescription,InefficientWeight,NestedWeights,ObsoleteLayoutParam" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.53"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imwomen"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:contentDescription=""
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/women"
+                tools:ignore="ContentDescription,InefficientWeight,NestedWeights,ObsoleteLayoutParam" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
