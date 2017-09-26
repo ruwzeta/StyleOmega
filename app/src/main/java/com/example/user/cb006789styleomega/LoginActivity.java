@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putString("password", password);
                     editor.commit();
                     LoginActivity.this.startActivity(loginIntent);
-                } else if (str.equals("admin") && pass.equals("admin")) {
+                } else if (str.equals("admin") && pass.equals("admin123")) {
                     Intent loginIntent = new Intent(LoginActivity.this, AdminHome.class);
                     startActivity(loginIntent);
                 } else {
