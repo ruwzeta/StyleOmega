@@ -1,4 +1,4 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import java.io.Serializable;
 

@@ -1,9 +1,9 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog; // Changed to AndroidX
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +21,8 @@ import java.util.List;
  * Created by User on 9/18/2017.
  */
 
+// Assuming Cart, DataBaseHelper will also be moved/refactored to com.styleomega.app package
+// If DataBaseHelper refers to com.styleomega.app.db.DatabaseHelper, specific import needed later.
 public class CartAdapter extends ArrayAdapter<Cart> {
     private Context context;
     private List<Cart> checkoutList;
@@ -40,7 +42,7 @@ public class CartAdapter extends ArrayAdapter<Cart> {
         View view = layoutInflater.inflate(R.layout.checkoutitem, parent, false);
 
         TextView checkoutsItemName = (TextView) view.findViewById(R.id.ItemNameText);
-        checkoutsItemName.setText(String.valueOf(checkoutList.get(position).getItemname()));
+        checkoutsItemName.setText(String.valueOf(checkoutList.get(position).getItemname())); // Assumes Cart is in com.styleomega.app
 
         int qty ;
 
@@ -48,7 +50,7 @@ public class CartAdapter extends ArrayAdapter<Cart> {
 
 
         TextView checkoutsItemPrice = (TextView) view.findViewById(R.id.ItemPriceText);
-        checkoutsItemPrice.setText(String.valueOf(checkoutList.get(position).getItemprice()));
+        checkoutsItemPrice.setText(String.valueOf(checkoutList.get(position).getItemprice())); // Assumes Cart is in com.styleomega.app
 
 
 
@@ -56,12 +58,13 @@ public class CartAdapter extends ArrayAdapter<Cart> {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int s = checkoutList.get(position).getCheckId();
+                int s = checkoutList.get(position).getCheckId(); // Assumes Cart is in com.styleomega.app
+                // This DataBaseHelper is from the old package.
                 DataBaseHelper db = new DataBaseHelper(context);
                 try {
                     if (db.cartDel(s)) {
                         Intent intent2;
-                        intent2 = new Intent(context,AddToCartActivity.class);
+                        intent2 = new Intent(context,AddToCartActivity.class); // Assumes AddToCartActivity is in com.styleomega.app
                         context.startActivity(intent2);
 
                         Toast.makeText(context,"Success :" +  "Checkout Item has been  removed!",

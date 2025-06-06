@@ -1,4 +1,4 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+// Assuming Items and DataBaseHelper will also be moved to com.styleomega.app package
+// If DataBaseHelper refers to com.styleomega.app.db.DatabaseHelper, specific import needed later.
 
 public class AddProductsActivity extends AppCompatActivity {
 
@@ -38,9 +41,12 @@ public class AddProductsActivity extends AppCompatActivity {
                 public void onClick(View v) {
 
                     try{
-
+                        // This DataBaseHelper is from the old package.
+                        // It will need to be updated to use the new com.styleomega.app.db.DatabaseHelper
+                        // or the old DataBaseHelper class needs to be refactored and moved.
+                        // For now, class resolution will assume it's in the same 'com.styleomega.app' package.
                         DataBaseHelper dbs = new DataBaseHelper(getBaseContext());
-                        Items items = new Items();
+                        Items items = new Items(); // Assuming Items will be in com.styleomega.app
                         items.setItemname(itemname.getText().toString());
                         items.setItemType(itemType.getText().toString());
                         items.setItemPrice(itemPrice.getText().toString());

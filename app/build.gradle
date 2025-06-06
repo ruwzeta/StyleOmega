@@ -1,15 +1,20 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application' version '7.4.2' // Updated AGP
+}
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+    compileOptions { // Added compileOptions for Java version
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    compileSdkVersion 33
     defaultConfig {
-        applicationId "com.example.user.cb006789styleomega"
+        applicationId "com.styleomega.app" // Updated applicationId
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner" // Updated runner
     }
     buildTypes {
         release {
@@ -20,14 +25,16 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar']) // compile -> implementation
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // AndroidX
+    implementation 'com.squareup.picasso:picasso:2.8' // Updated Picasso
+    implementation 'androidx.appcompat:appcompat:1.6.1' // AndroidX
+    implementation 'com.google.android.material:material:1.9.0' // AndroidX (Material Design)
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // AndroidX
+    implementation 'org.postgresql:postgresql:42.6.0' // PostgreSQL JDBC Driver
+    implementation 'com.openai:openai-client:0.10.0' // OpenAI Client
 
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2' // testCompile -> testImplementation
+    testImplementation 'org.mockito:mockito-core:4.8.0'
+    androidTestImplementation 'org.mockito:mockito-android:4.8.0'
 }
