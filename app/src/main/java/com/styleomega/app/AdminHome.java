@@ -1,4 +1,4 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+// Assuming ViewInquiry, AddProductsActivity, LoginActivity will also be moved to com.styleomega.app package
 public class AdminHome extends AppCompatActivity {
 
     Button CREATEButton,SIGNout,Viewinq;

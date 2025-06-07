@@ -1,4 +1,4 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

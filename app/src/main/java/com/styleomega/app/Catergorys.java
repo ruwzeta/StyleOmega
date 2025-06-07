@@ -1,14 +1,15 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity; // Changed to AndroidX
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
+import androidx.appcompat.widget.SearchView; // Changed to AndroidX
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+// Assuming MainMenu will also be moved to com.styleomega.app package
 public class Catergorys extends AppCompatActivity {
 
     @Override

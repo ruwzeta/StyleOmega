@@ -1,4 +1,4 @@
-package com.example.user.cb006789styleomega;
+package com.styleomega.app; // Changed package
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,6 +17,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+// Assuming Cart, DataBaseHelper, CartAdapter will also be moved/refactored to com.styleomega.app package
+// If DataBaseHelper refers to com.styleomega.app.db.DatabaseHelper, specific import needed later.
+
 public class AddToCartActivity extends AppCompatActivity {
     private List<Cart> checkoutsList;
     private ListView listcheckouts;
@@ -33,8 +36,11 @@ public class AddToCartActivity extends AppCompatActivity {
             SharedPreferences logindetails = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
             String userName = logindetails.getString("username", null);
             checkoutsList = new ArrayList<Cart>();
+            // This DataBaseHelper is from the old package.
+            // It will need to be updated to use the new com.styleomega.app.db.DatabaseHelper
+            // or the old DataBaseHelper class needs to be refactored and moved.
             DataBaseHelper db = new DataBaseHelper(getBaseContext());
-            checkoutsList = db.cartlist(userName);
+            checkoutsList = db.cartlist(userName); // Assumes Cart will be in com.styleomega.app
             checkout=(Button)findViewById(R.id.btncheck);
 
             if (checkoutsList.size() == 0) {
@@ -42,6 +48,7 @@ public class AddToCartActivity extends AppCompatActivity {
             } else {
 
                 this.listcheckouts = (ListView) findViewById(R.id.listView);
+                // Assumes CartAdapter will be in com.styleomega.app
                 this.listcheckouts.setAdapter(new CartAdapter(this, checkoutsList));
                 this.totalPrice = (TextView) findViewById(R.id.textView12);
 

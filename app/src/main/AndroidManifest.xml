@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.user.cb006789styleomega">
+    package="com.styleomega.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -32,6 +32,7 @@
         <activity android:name=".ManageUsers" />
         <activity android:name=".ManageEmail" />
         <activity android:name=".About"></activity>
+        <activity android:name=".ChatbotActivity" />
     </application>
 
 </manifest>
